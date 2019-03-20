@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script >
+		function detect(score){
+			if (score < 60) {
+				document.getElementById("demo").innerHTML = "go to die"
+			}else{
+				document.getElementById("demo").innerHTML = "not bad"
+			}
+
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.fillStyle = 'red';
+			ctx.fillRect(0,0,100,300);
+			ctx.clearRect(0,0,100,300-(score*3))
+		}
+
+
+	</script>
+
+
+</head>
+
+<body>
+	<input  id ="score" value = 0>
+	<button onclick="detect(eval(score.value))">enter</button>
+	<p id = "demo"> </p>
+
+	<canvas id="myCanvas" width="100" height="300" style="border:1px solid #d3d3d3;">
+</canvas>
+
+	<script>
+		var c = document.getElementById("myCanvas");
+		var ctx = c.getContext("2d");
+		ctx.fillStyle = 'red';
+		ctx.fillRect(0,0,100,300);
+	</script>
+</body>
+</html>
