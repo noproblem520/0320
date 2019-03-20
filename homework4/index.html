@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function move(){
+			var i = 1
+
+			setInterval(function(){
+				var i = 1
+				ctx.fillRect(0,0,800,600);
+
+				ctx.clearRect(50+i,50,300,200)
+			},10);
+			
+
+		}
+
+	</script>
+</head>
+<body>
+
+<canvas id="myCanvas" width="800" height="600" style="border:1px solid #d3d3d3;">
+</canvas>
+
+	<script>
+		var c = document.getElementById("myCanvas");
+		var ctx = c.getContext("2d");
+		ctx.fillStyle = 'red';
+		ctx.fillRect(0,0,800,600);
+		ctx.clearRect(50,50,300,200)
+	</script>
+
+<button onclick="move()">move </button>
+
+
+
+</body>
+</html>

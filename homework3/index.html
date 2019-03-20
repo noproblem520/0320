@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script >
+		function detect(score){
+			if (score < 60) {
+				document.getElementById("demo").innerHTML = "go to die"
+			}else{
+				document.getElementById("demo").innerHTML = "not bad"
+			}
+		}
+
+	</script>
+
+
+</head>
+
+<body>
+	<input  id ="score" value = 0>
+	<button onclick="detect(eval(score.value))">enter</button>
+	<p id = "demo"> </p>
+</body>
+</html>

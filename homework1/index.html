@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+
+	<title></title>
+	<script>
+
+		function add(){
+			var a,b
+			a = eval(n1.value)
+			b = eval(n2.value)
+			document.getElementById("demo").innerHTML = (a+b)
+		}
+
+		function minus(n1,n2){
+			document.getElementById("demo").innerHTML = (n1-n2);
+		}
+
+		function times(n1,n2){
+			document.getElementById("demo").innerHTML = (n1*n2);
+		}
+
+		function divide(n1,n2){
+			document.getElementById("demo").innerHTML = (n1/n2);
+		}
+
+		function ac(){
+			document.getElementById("demo").innerHTML = "";
+			document.getElementById("n1").value = 0;
+			document.getElementById("n2").value = 0;
+		}
+
+	</script>
+
+</head>
+<body>
+	
+	<input type="" id ="n1" value = 0>
+	<input type="" id ="n2" value = 0>
+	
+	<button id = "add" onclick="add()">+</button>
+	<button id = "minus" onclick="minus(eval(n1.value),eval(n2.value))">-</button>
+	<button id = "times" onclick="times(eval(n1.value),eval(n2.value))">*</button>
+	<button id = "divide" onclick="divide(eval(n1.value),eval(n2.value))">/</button>
+	<button id = "ac" onclick="ac()">clear</button>
+
+	<p id = "demo"> </p> 
+</body>
+</html>
